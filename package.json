@@ -1,0 +1,23 @@
+{
+  "name": "@killoblanco/tail-breeze",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/tail-breeze.cjs",
+  "module": "dist/tail-breeze.js",
+  "types": "dist/tail-breeze.d.ts",
+  "scripts": {
+    "build": "tsup lib/tail-breeze.ts --format cjs,esm --dts",
+    "lint": "tsc",
+    "changeset": "changeset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "2.26.2",
+    "@tsconfig/recommended": "1.0.3",
+    "tsup": "8.0.1",
+    "typescript": "5.3.2"
+  }
+}
