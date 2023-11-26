@@ -9,14 +9,6 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<Html>
-  <section
-    class="w-screen h-screen grid grid-cols-[minmax(max-content,_320px)_repeat(2,_1fr)] grid-rows-1 gap-8 p-8"
-  >
-    <aside class="col-span-1 overflow-hidden overflow-y-auto">
-      <Navbar />
-    </aside>
-
 <Html title={title}>
   <section
     class="w-screen h-screen grid grid-cols-[minmax(max-content,_320px)_repeat(2,_1fr)] grid-rows-1 gap-8 p-8"
