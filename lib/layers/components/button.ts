@@ -4,7 +4,7 @@ import { typographyComponents } from './typography';
 
 const colorVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
   backgroundColor: api.theme(`colors.${color}.40`),
-  color: api.theme('colors.neutral.100'),
+  color: api.theme(`colors.${color}.100`),
   '&:hover': {
     backgroundColor: api.theme(`colors.${color}.48`),
   },
@@ -15,6 +15,20 @@ const colorVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
     backgroundColor: `${api.theme(`colors.${color}.10`)}1F`,
     color: `${api.theme(`colors.${color}.10`)}61`,
   },
+  '[data-theme="dark"] &': {
+    backgroundColor: api.theme(`colors.${color}.80`),
+    color: api.theme(`colors.${color}.20`),
+    '&:hover': {
+      backgroundColor: api.theme(`colors.${color}.72`),
+    },
+    '&:active, &:focus': {
+      backgroundColor: api.theme(`colors.${color}.68`),
+    },
+    '&:disabled': {
+      backgroundColor: `${api.theme(`colors.${color}.90`)}1F`,
+      color: `${api.theme(`colors.${color}.90`)}61`,
+    },
+  }
 })
 
 const tonalVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
@@ -30,6 +44,20 @@ const tonalVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
     backgroundColor: `${api.theme(`colors.${color}.90`)}1F`,
     color: `${api.theme(`colors.${color}.10`)}61`,
   },
+  '[data-theme="dark"] &': {
+    backgroundColor: api.theme(`colors.${color}.30`),
+    color: api.theme(`colors.${color}.90`),
+    '&:hover': {
+      backgroundColor: api.theme(`colors.${color}.22`),
+    },
+    '&:active, &:focus': {
+      backgroundColor: api.theme(`colors.${color}.18`),
+    },
+    '&:disabled': {
+      backgroundColor: `${api.theme(`colors.${color}.30`)}1F`,
+      color: `${api.theme(`colors.${color}.90`)}61`,
+    }
+  }
 })
 
 const outlinedVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
@@ -49,6 +77,24 @@ const outlinedVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
     border: `1px solid ${api.theme(`colors.${color}.10`)}1F`,
     color: `${api.theme(`colors.${color}.40`)}61`,
   },
+  '[data-theme="dark"] &': {
+    backgroundColor: api.theme('colors.neutral.2'),
+    border: `1px solid ${api.theme('colors.neutral.50')}`,
+    color: api.theme(`colors.${color}.80`),
+    '&:hover': {
+      backgroundColor: `${api.theme(`colors.${color}.80`)}14`,
+      border: `1px solid ${api.theme(`colors.${color}.80`)}`,
+    },
+    '&:active, &:focus': {
+      backgroundColor: `${api.theme(`colors.${color}.80`)}1F`,
+      border: `1px solid ${api.theme(`colors.${color}.80`)}`,
+    },
+    '&:disabled': {
+      backgroundColor: api.theme('colors.neutral.2'),
+      border: `1px solid ${api.theme(`colors.${color}.10`)}1F`,
+      color: `${api.theme(`colors.${color}.80`)}61`,
+    },
+  }
 })
 
 const textVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
@@ -64,6 +110,20 @@ const textVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
     backgroundColor: api.theme('colors.neutral.98'),
     color: `${api.theme(`colors.${color}.40`)}61`,
   },
+  '[data-theme="dark"] &': {
+    backgroundColor: api.theme('colors.neutral.2'),
+    color: api.theme(`colors.${color}.80`),
+    '&:hover': {
+      backgroundColor: `${api.theme(`colors.${color}.80`)}14`,
+    },
+    '&:active, &:focus': {
+      backgroundColor: `${api.theme(`colors.${color}.80`)}1F`,
+    },
+    '&:disabled': {
+      backgroundColor: api.theme('colors.neutral.2'),
+      color: `${api.theme(`colors.${color}.80`)}61`,
+    },
+  }
 })
 
 export const buttonComponents = (options = defaultOptions, api: PluginAPI): CSSRuleObject => {
