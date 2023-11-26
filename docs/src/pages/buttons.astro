@@ -11,8 +11,19 @@ import Scaffold from "../layouts/scaffold/scaffold.astro";
       <button type="button" class="btn">Button</button>
     </section>
     <section>
+      <h6>Button with Elevations</h6>
+      <section class="flex justify-between">
+        <button type="button" class="btn">Elevation 0</button>
+        <button type="button" class="btn shadow-elevate-1">Elevation 1</button>
+        <button type="button" class="btn shadow-elevate-2">Elevation 2</button>
+        <button type="button" class="btn shadow-elevate-3">Elevation 3</button>
+        <button type="button" class="btn shadow-elevate-4">Elevation 4</button>
+        <button type="button" class="btn shadow-elevate-5">Elevation 5</button>
+      </section>
+    </section>
+    <section>
       <h6>Color Button</h6>
-      <section>
+      <section class="flex justify-between">
         <button type="button" class="btn">Neutral</button>
         <button type="button" class="btn btn-primary">Primary</button>
         <button type="button" class="btn btn-secondary">Secondary</button>
@@ -25,7 +36,7 @@ import Scaffold from "../layouts/scaffold/scaffold.astro";
     </section>
     <section>
       <h6>Tonal Button Variant</h6>
-      <section>
+      <section class="flex justify-between">
         <button type="button" class="btn btn-tonal">Neutral</button>
         <button type="button" class="btn btn-tonal-primary">Primary</button>
         <button type="button" class="btn btn-tonal-secondary">Secondary</button>
@@ -38,7 +49,7 @@ import Scaffold from "../layouts/scaffold/scaffold.astro";
     </section>
     <section>
       <h6>Outlined Button Variant</h6>
-      <section>
+      <section class="flex justify-between">
         <button type="button" class="btn btn-outlined">Neutral</button>
         <button type="button" class="btn btn-outlined-primary">Primary</button>
         <button type="button" class="btn btn-outlined-secondary">Secondary</button>
@@ -51,7 +62,7 @@ import Scaffold from "../layouts/scaffold/scaffold.astro";
     </section>
     <section>
       <h6>Text Button Variant</h6>
-      <section>
+      <section class="flex justify-between">
         <button type="button" class="btn btn-text">Neutral</button>
         <button type="button" class="btn btn-text-primary">Primary</button>
         <button type="button" class="btn btn-text-secondary">Secondary</button>
@@ -64,13 +75,13 @@ import Scaffold from "../layouts/scaffold/scaffold.astro";
     </section>
     <section>
       <h6>Disabled Button Variants</h6>
-      <section>
+      <section class="flex justify-between">
         <button type="button" disabled class="btn">Default</button>
         <button type="button" disabled class="btn btn-tonal">Tonal</button>
         <button type="button" disabled class="btn btn-outlined">Outlined</button>
         <button type="button" disabled class="btn btn-text">Text</button>
       </section>
-      <section>
+      <section class="flex justify-between">
         <button type="button" disabled class="btn btn-primary">Default</button>
         <button type="button" disabled class="btn btn-tonal-primary">Tonal</button>
         <button type="button" disabled class="btn btn-outlined-primary">Outlined</button>
