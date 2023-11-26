@@ -1,13 +1,13 @@
 const defaultOptions = {
   colors: {
-    neutral: '#495057',
-    primary: '#5c7cfa',
-    secondary: '#d6336c',
-    accent: '#ae3ec9',
-    success: '#37b24d',
-    info: '#1098ad',
-    warning: '#f76707',
-    error: '#f03e3e'
+    neutral: '#9E9E9E',
+    primary: '#3F51B5',
+    secondary: '#E91E63',
+    accent: '#9C27B0',
+    success: '#4CAF50',
+    info: '#00BCD4',
+    warning: '#FFC107',
+    error: '#F44336'
   }
 }
 
