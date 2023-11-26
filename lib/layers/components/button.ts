@@ -45,6 +45,7 @@ const outlinedVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
     border: `1px solid ${api.theme(`colors.${color}.40`)}`,
   },
   '&:disabled': {
+    backgroundColor: api.theme('colors.neutral.98'),
     border: `1px solid ${api.theme(`colors.${color}.10`)}1F`,
     color: `${api.theme(`colors.${color}.40`)}61`,
   },
@@ -60,6 +61,7 @@ const textVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
     backgroundColor: `${api.theme(`colors.${color}.40`)}1F`,
   },
   '&:disabled': {
+    backgroundColor: api.theme('colors.neutral.98'),
     color: `${api.theme(`colors.${color}.40`)}61`,
   },
 })
@@ -79,10 +81,7 @@ export const buttonComponents = (options = defaultOptions, api: PluginAPI): CSSR
       padding: `${api.theme('spacing.2')} ${api.theme('spacing.4')}`,
       transitionProperty: 'all',
       transitionDuration: api.theme('transitionDuration.150'),
-      transitionTimingFunction: api.theme('transitionTimingFunction.standard'),
-      '&:disabled': {
-        pointerEvents: 'none',
-      },
+      transitionTimingFunction: api.theme('transitionTimingFunction.standard')
     },
     '.btn-tonal': tonalVariant('neutral', api),
     '.btn-outlined': outlinedVariant('neutral', api),
