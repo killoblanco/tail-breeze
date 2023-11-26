@@ -12,7 +12,7 @@ export default function colors (colors: Options['colors']) {
 
       return {
         ...acc,
-        [key]: [0, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 98, 100]
+        [key]: Array.from({ length: 101 }, (_, i) => i)
           .reduce((acc, shade) => ({
             ...acc,
             [shade]: hexFromArgb(palette.tone(shade))

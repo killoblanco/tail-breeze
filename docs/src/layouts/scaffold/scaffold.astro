@@ -1,11 +1,23 @@
 ---
-import Html from '../html.astro';
+import Html from "../html.astro";
+import Navbar from "./components/navbar.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
 ---
+
 <Html>
-  <section class="w-screen h-screen grid grid-cols-[minmax(max-content,_320px)_repeat(2,_1fr)] grid-rows-1 gap-8 p-8">
-    <aside class="col-span-1 overflow-hidden overflow-y-auto">aside</aside>
+  <section
+    class="w-screen h-screen grid grid-cols-[minmax(max-content,_320px)_repeat(2,_1fr)] grid-rows-1 gap-8 p-8"
+  >
+    <aside class="col-span-1 overflow-hidden overflow-y-auto">
+      <Navbar />
+    </aside>
     <main class="col-span-2 container overflow-hidden overflow-y-auto">
-      <slot/>
+      <slot />
     </main>
   </section>
 </Html>
