@@ -1,11 +1,11 @@
 ---
+import Preview from "../components/preview.astro";
 import Scaffold from "../layouts/scaffold/scaffold.astro";
 ---
 
 <Scaffold title="Typography">
-  <h1>Typography</h1>
-  <p>TailBreeze</p>
-  <section class="flex flex-col gap-4">
+  <h2>Typography</h2>
+  <Preview title="Default Styles" asCol>
     <h1>H1. Heading 1</h1>
     <h2>H2. Heading 2</h2>
     <h3>H3. Heading 3</h3>
@@ -18,5 +18,5 @@ import Scaffold from "../layouts/scaffold/scaffold.astro";
     <p class="text-body-2">P. Body 2</p>
     <p class="text-button">P. Button</p>
     <p class="text-caption">P. Caption</p>
-  </section>
+  </Preview>
 </Scaffold>
