@@ -1,0 +1,50 @@
+---
+interface Props {
+  title?: string;
+  asCol?: boolean;
+  extraSpace?: boolean;
+  withCode?: boolean;
+}
+
+const { title, asCol, extraSpace, withCode = true } = Astro.props;
+
+let code = "";
+
+if (withCode) code = (await Astro.slots.render("default")).trim().replaceAll("> <", ">\n<");
+
+const className = [
+  "border border-neutral-70 dark:border-neutral-30",
+  "bg-neutral-95 dark:bg-neutral-12",
+  "flex flex-wrap items-center justify-center w-full p-8 rounded-md",
+  {
+    "flex-col sm:flex-row": !asCol,
+    "flex-col": asCol,
+    "gap-4": !extraSpace,
+    "gap-8": extraSpace,
+  },
+];
+---
+
+<style>
+  pre {
+    text-wrap: pretty;
+  }
+</style>
+
+<section class="flex flex-col gap-2">
+  {title && <h6>{title}</h6>}
+  <section class:list={className}>
+    <slot />
+  </section>
+  {
+    withCode && (
+      <details>
+        <summary class="btn btn-tonal px-2 py-1 mb-2 cursor-pointer text-sm">
+          <iconify-icon icon="tabler:code-circle" width="20" height="20" />
+          View Code
+        </summary>
+        <pre class:list={className} set:text={code} />
+      </details>
+    )
+  }
+</section>
