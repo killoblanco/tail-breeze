@@ -1,0 +1,147 @@
+---
+import Preview from "../components/preview.astro";
+import Scaffold from "../layouts/scaffold/scaffold.astro";
+---
+
+<Scaffold title="Avatars">
+  <h2>Avatars</h2>
+  <Preview title="Default Avatar">
+    <div class="avatar">
+      <div class="rounded-md">
+        <img
+          src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+        />
+      </div>
+    </div>
+  </Preview>
+  <Preview title="Avatar with Custom Sizes">
+    <div class="avatar">
+      <div class="w-32 rounded-md">
+        <img
+          src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+        />
+      </div>
+    </div>
+    <div class="avatar">
+      <div class="w-24 rounded-md">
+        <img
+          src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+        />
+      </div>
+    </div>
+    <div class="avatar">
+      <div class="w-16 rounded-md">
+        <img
+          src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+        />
+      </div>
+    </div>
+    <div class="avatar">
+      <div class="w-8 rounded-md">
+        <img
+          src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+        />
+      </div>
+    </div>
+  </Preview>
+  <Preview title="Avatar Rounded">
+    <div class="avatar">
+      <div class="w-24 rounded-md">
+        <img
+          src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+        />
+      </div>
+    </div>
+    <div class="avatar">
+      <div class="w-24 rounded-full">
+        <img
+          src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+        />
+      </div>
+    </div>
+  </Preview>
+  <Preview title="Avatar Group">
+    <div class="avatar-group -space-x-6">
+      <div class="avatar">
+        <div class="w-12">
+          <img
+            src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+          />
+        </div>
+      </div>
+      <div class="avatar">
+        <div class="w-12">
+          <img
+            src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+          />
+        </div>
+      </div>
+      <div class="avatar">
+        <div class="w-12">
+          <img
+            src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+          />
+        </div>
+      </div>
+      <div class="avatar">
+        <div class="w-12">
+          <img
+            src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+          />
+        </div>
+      </div>
+    </div>
+  </Preview>
+  <Preview title="Avatar Group with Placeholder">
+    <div class="avatar-group -space-x-6">
+      <div class="avatar">
+        <div class="w-12">
+          <img
+            src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+          />
+        </div>
+      </div>
+      <div class="avatar">
+        <div class="w-12">
+          <img
+            src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+          />
+        </div>
+      </div>
+      <div class="avatar">
+        <div class="w-12">
+          <img
+            src={`https://api.dicebear.com/7.x/avataaars-neutral/svg?seed=${globalThis.crypto.randomUUID()}`}
+          />
+        </div>
+      </div>
+      <div class="avatar avatar-placeholder">
+        <div class="w-12">
+          <p>+99</p>
+        </div>
+      </div>
+    </div>
+  </Preview>
+  <Preview title="Avatar Placeholder">
+    <div class="avatar avatar-placeholder">
+      <div class="w-32 rounded-md">
+        <p class="text-3xl">JD</p>
+      </div>
+    </div>
+    <div class="avatar avatar-placeholder">
+      <div class="w-24 rounded-md">
+        <p class="text-xl">JD</p>
+      </div>
+    </div>
+    <div class="avatar avatar-placeholder">
+      <div class="w-16 rounded-md">
+        <p>JD</p>
+      </div>
+    </div>
+    <div class="avatar avatar-placeholder">
+      <div class="w-8 rounded-md">
+        <p class="text-xs">JD</p>
+      </div>
+    </div>
+  </Preview>
+</Scaffold>

@@ -1,11 +1,11 @@
 ---
+import Preview from "../components/preview.astro";
 import Scaffold from "../layouts/scaffold/scaffold.astro";
 ---
 
 <Scaffold title="Shadows">
-  <h1>Shadows</h1>
-  <p>TailBreeze</p>
-  <section class="grid grid-cols-3 gap-4">
+  <h2>Shadows</h2>
+  <Preview title="Default Elevations" extraSpace>
     <div class="flex flex-col gap-4 items-center justify-center">
       <div class="shadow-none border w-40 aspect-square rounded-md"></div>
       <p>Elevation 0</p>
@@ -30,5 +30,5 @@ import Scaffold from "../layouts/scaffold/scaffold.astro";
       <div class="shadow-elevate-5 w-40 aspect-square rounded-md"></div>
       <p>Elevation 5</p>
     </div>
-  </section>
+  </Preview>
 </Scaffold>

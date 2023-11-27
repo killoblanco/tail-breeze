@@ -1,34 +1,77 @@
 ---
+const styles = {
+  btn: "btn btn-tonal px-2 py-0.5 w-full justify-start",
+};
 ---
 
-<ul>
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    gap: theme("spacing.2");
+  }
+  ul [open] summary {
+    margin-bottom: theme("spacing.2");
+  }
+
+  ul ul {
+    margin-left: theme("spacing.4");
+  }
+</style>
+
+<ul class="text-body-2">
   <li>
-    Defaults
-    <ul>
-      <li>
-        <a href="/colors">Colors</a>
-      </li>
-      <li>
-        <a href="/shadows">Shadows</a>
-      </li>
-    </ul>
-    <li>
-      <a href="/typography">Typography</a>
-    </li>
+    <details open>
+      <summary>Defaults</summary>
+      <ul>
+        <li>
+          <a class={styles.btn} href="/colors">Colors</a>
+        </li>
+        <li>
+          <a class={styles.btn} href="/shadows">Shadows</a>
+        </li>
+        <li>
+          <a class={styles.btn} href="/typography">Typography</a>
+        </li>
+      </ul>
+    </details>
   </li>
   <li>
-    Components
-    <ul>
-      Actions
-      <li>
-        <a href="/buttons">Buttons</a>
-      </li>
-    </ul>
-    <ul>
-      Feedback
-      <li>
-        <a href="/alerts">Alerts</a>
-      </li>
-    </ul>
+    <details open>
+      <summary>Components</summary>
+      <ul>
+        <li>
+          <details open>
+            <summary>Actions</summary>
+            <ul>
+              <li>
+                <a class={styles.btn} href="/buttons">Buttons</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Data Display</summary>
+            <ul>
+              <li>
+                <a class={styles.btn} href="/avatars">Avatars</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details open>
+            <summary>Feedback</summary>
+            <ul>
+              <li>
+                <a class={styles.btn} href="/alerts">Alerts</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </details>
   </li>
 </ul>

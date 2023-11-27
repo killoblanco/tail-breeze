@@ -61,7 +61,7 @@ const tonalVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
 })
 
 const outlinedVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
-  backgroundColor: api.theme('colors.neutral.98'),
+  backgroundColor: 'transparent',
   border: `1px solid ${api.theme('colors.neutral.50')}`,
   color: api.theme(`colors.${color}.40`),
   '&:hover': {
@@ -78,7 +78,7 @@ const outlinedVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
     color: `${api.theme(`colors.${color}.40`)}61`,
   },
   '[data-theme="dark"] &': {
-    backgroundColor: api.theme('colors.neutral.2'),
+    backgroundColor: 'transparent',
     border: `1px solid ${api.theme('colors.neutral.50')}`,
     color: api.theme(`colors.${color}.80`),
     '&:hover': {
@@ -98,7 +98,7 @@ const outlinedVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
 })
 
 const textVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
-  backgroundColor: api.theme('colors.neutral.98'),
+  backgroundColor: 'transparent',
   color: api.theme(`colors.${color}.40`),
   '&:hover': {
     backgroundColor: `${api.theme(`colors.${color}.40`)}14`,
@@ -111,7 +111,7 @@ const textVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
     color: `${api.theme(`colors.${color}.40`)}61`,
   },
   '[data-theme="dark"] &': {
-    backgroundColor: api.theme('colors.neutral.2'),
+    backgroundColor: 'transparent',
     color: api.theme(`colors.${color}.80`),
     '&:hover': {
       backgroundColor: `${api.theme(`colors.${color}.80`)}14`,

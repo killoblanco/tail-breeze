@@ -1,42 +1,70 @@
 ---
+import Preview from "../components/preview.astro";
 import Scaffold from "../layouts/scaffold/scaffold.astro";
 ---
 
 <Scaffold title="Alerts">
-  <h1>Alerts</h1>
-  <p>TailBreeze</p>
-  <section class="flex flex-col gap-4">
-    <div class="flex flex-col gap-2">
-      <h6>Default Alert</h6>
-      <div role="alert" class="alert">
-        <p>Alert Content</p>
-      </div>
+  <h2>Alerts</h2>
+  <Preview title="Default Alert">
+    <div role="alert" class="alert">
+      <p>Alert Content</p>
     </div>
-    <div class="flex flex-col gap-2">
-      <h6>Color Alert</h6>
-      <div class="flex flex-col gap-4">
-        <div role="alert" class="alert alert-primary">
-          <p>Primary Alert Content</p>
-        </div>
-        <div role="alert" class="alert alert-secondary">
-          <p>Secondary Alert Content</p>
-        </div>
-        <div role="alert" class="alert alert-accent">
-          <p>Accent Alert Content</p>
-        </div>
-        <div role="alert" class="alert alert-info">
-          <p>Info Alert Content</p>
-        </div>
-        <div role="alert" class="alert alert-success">
-          <p>Success Alert Content</p>
-        </div>
-        <div role="alert" class="alert alert-warning">
-          <p>Warning Alert Content</p>
-        </div>
-        <div role="alert" class="alert alert-error">
-          <p>Error Alert Content</p>
-        </div>
-      </div>
+  </Preview>
+  <Preview title="Color Alerts" asCol>
+    <div role="alert" class="alert alert-primary">
+      <p>Primary Alert Content</p>
     </div>
-  </section>
+    <div role="alert" class="alert alert-secondary">
+      <p>Secondary Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-accent">
+      <p>Accent Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-info">
+      <p>Info Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-success">
+      <p>Success Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-warning">
+      <p>Warning Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-error">
+      <p>Error Alert Content</p>
+    </div>
+  </Preview>
+  <Preview title="Alerts with Icons" asCol>
+    <div role="alert" class="alert">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24"></iconify-icon>
+      <p>Default Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-primary">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24"></iconify-icon>
+      <p>Primary Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-secondary">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24"></iconify-icon>
+      <p>Secondary Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-accent">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24"></iconify-icon>
+      <p>Accent Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-info">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24"></iconify-icon>
+      <p>Info Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-success">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24"></iconify-icon>
+      <p>Success Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-warning">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24"></iconify-icon>
+      <p>Warning Alert Content</p>
+    </div>
+    <div role="alert" class="alert alert-error">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24"></iconify-icon>
+      <p>Error Alert Content</p>
+    </div>
+  </Preview>
 </Scaffold>

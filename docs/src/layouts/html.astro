@@ -14,7 +14,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title && `${title} | `}TailBreeze</title>
   </head>
-  <body>
+  <body data-theme="dark">
+    <!-- <body> -->
     <slot />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </body>
 </html>
