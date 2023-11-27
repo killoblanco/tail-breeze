@@ -1,92 +1,65 @@
 ---
+import Preview from "../components/preview.astro";
 import Scaffold from "../layouts/scaffold/scaffold.astro";
 ---
 
 <Scaffold title="Buttons">
-  <h1>Buttons</h1>
-  <p>TailBreeze</p>
-  <section class="flex flex-col gap-4">
-    <section>
-      <h6>Default Button</h6>
-      <button type="button" class="btn">Button</button>
-    </section>
-    <section>
-      <h6>Button with Elevations</h6>
-      <section class="flex justify-between">
-        <button type="button" class="btn">Elevation 0</button>
-        <button type="button" class="btn shadow-elevate-1">Elevation 1</button>
-        <button type="button" class="btn shadow-elevate-2">Elevation 2</button>
-        <button type="button" class="btn shadow-elevate-3">Elevation 3</button>
-        <button type="button" class="btn shadow-elevate-4">Elevation 4</button>
-        <button type="button" class="btn shadow-elevate-5">Elevation 5</button>
-      </section>
-    </section>
-    <section>
-      <h6>Color Button</h6>
-      <section class="flex justify-between">
-        <button type="button" class="btn">Neutral</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-accent">Accent</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-error">Error</button>
-      </section>
-    </section>
-    <section>
-      <h6>Tonal Button Variant</h6>
-      <section class="flex justify-between">
-        <button type="button" class="btn btn-tonal">Neutral</button>
-        <button type="button" class="btn btn-tonal-primary">Primary</button>
-        <button type="button" class="btn btn-tonal-secondary">Secondary</button>
-        <button type="button" class="btn btn-tonal-accent">Accent</button>
-        <button type="button" class="btn btn-tonal-info">Info</button>
-        <button type="button" class="btn btn-tonal-success">Success</button>
-        <button type="button" class="btn btn-tonal-warning">Warning</button>
-        <button type="button" class="btn btn-tonal-error">Error</button>
-      </section>
-    </section>
-    <section>
-      <h6>Outlined Button Variant</h6>
-      <section class="flex justify-between">
-        <button type="button" class="btn btn-outlined">Neutral</button>
-        <button type="button" class="btn btn-outlined-primary">Primary</button>
-        <button type="button" class="btn btn-outlined-secondary">Secondary</button>
-        <button type="button" class="btn btn-outlined-accent">Accent</button>
-        <button type="button" class="btn btn-outlined-info">Info</button>
-        <button type="button" class="btn btn-outlined-success">Success</button>
-        <button type="button" class="btn btn-outlined-warning">Warning</button>
-        <button type="button" class="btn btn-outlined-error">Error</button>
-      </section>
-    </section>
-    <section>
-      <h6>Text Button Variant</h6>
-      <section class="flex justify-between">
-        <button type="button" class="btn btn-text">Neutral</button>
-        <button type="button" class="btn btn-text-primary">Primary</button>
-        <button type="button" class="btn btn-text-secondary">Secondary</button>
-        <button type="button" class="btn btn-text-accent">Accent</button>
-        <button type="button" class="btn btn-text-info">Info</button>
-        <button type="button" class="btn btn-text-success">Success</button>
-        <button type="button" class="btn btn-text-warning">Warning</button>
-        <button type="button" class="btn btn-text-error">Error</button>
-      </section>
-    </section>
-    <section>
-      <h6>Disabled Button Variants</h6>
-      <section class="flex justify-between">
-        <button type="button" disabled class="btn">Default</button>
-        <button type="button" disabled class="btn btn-tonal">Tonal</button>
-        <button type="button" disabled class="btn btn-outlined">Outlined</button>
-        <button type="button" disabled class="btn btn-text">Text</button>
-      </section>
-      <section class="flex justify-between">
-        <button type="button" disabled class="btn btn-primary">Default</button>
-        <button type="button" disabled class="btn btn-tonal-primary">Tonal</button>
-        <button type="button" disabled class="btn btn-outlined-primary">Outlined</button>
-        <button type="button" disabled class="btn btn-text-primary">Text</button>
-      </section>
-    </section>
-  </section>
+  <h2>Buttons</h2>
+  <Preview title="Default Button">
+    <button type="button" class="btn">Button</button>
+  </Preview>
+  <Preview title="Buttons with Elevation">
+    <button type="button" class="btn">Elevation 0</button>
+    <button type="button" class="btn shadow-elevate-1">Elevation 1</button>
+    <button type="button" class="btn shadow-elevate-2">Elevation 2</button>
+    <button type="button" class="btn shadow-elevate-3">Elevation 3</button>
+    <button type="button" class="btn shadow-elevate-4">Elevation 4</button>
+    <button type="button" class="btn shadow-elevate-5">Elevation 5</button>
+  </Preview>
+  <Preview title="Colored Buttons">
+    <button type="button" class="btn">Neutral</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-accent">Accent</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-error">Error</button>
+  </Preview>
+  <Preview title="Tonal Button Variant">
+    <button type="button" class="btn btn-tonal">Neutral</button>
+    <button type="button" class="btn btn-tonal-primary">Primary</button>
+    <button type="button" class="btn btn-tonal-secondary">Secondary</button>
+    <button type="button" class="btn btn-tonal-accent">Accent</button>
+    <button type="button" class="btn btn-tonal-info">Info</button>
+    <button type="button" class="btn btn-tonal-success">Success</button>
+    <button type="button" class="btn btn-tonal-warning">Warning</button>
+    <button type="button" class="btn btn-tonal-error">Error</button>
+  </Preview>
+  <Preview title="Outlined Button Variant">
+    <button type="button" class="btn btn-outlined">Neutral</button>
+    <button type="button" class="btn btn-outlined-primary">Primary</button>
+    <button type="button" class="btn btn-outlined-secondary">Secondary</button>
+    <button type="button" class="btn btn-outlined-accent">Accent</button>
+    <button type="button" class="btn btn-outlined-info">Info</button>
+    <button type="button" class="btn btn-outlined-success">Success</button>
+    <button type="button" class="btn btn-outlined-warning">Warning</button>
+    <button type="button" class="btn btn-outlined-error">Error</button>
+  </Preview>
+  <Preview title="Text Button Variant">
+    <button type="button" class="btn btn-text">Neutral</button>
+    <button type="button" class="btn btn-text-primary">Primary</button>
+    <button type="button" class="btn btn-text-secondary">Secondary</button>
+    <button type="button" class="btn btn-text-accent">Accent</button>
+    <button type="button" class="btn btn-text-info">Info</button>
+    <button type="button" class="btn btn-text-success">Success</button>
+    <button type="button" class="btn btn-text-warning">Warning</button>
+    <button type="button" class="btn btn-text-error">Error</button>
+  </Preview>
+  <Preview title="Disabled Button Variants">
+    <button type="button" disabled class="btn">Default</button>
+    <button type="button" disabled class="btn btn-tonal">Tonal</button>
+    <button type="button" disabled class="btn btn-outlined">Outlined</button>
+    <button type="button" disabled class="btn btn-text">Text</button>
+  </Preview>
 </Scaffold>
