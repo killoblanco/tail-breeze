@@ -6,6 +6,7 @@ import { motion } from './motion';
 
 export default function extendTheme (options = defaultOptions): Partial<Config> {
   return {
+    darkMode: ['class', '[data-theme="dark"]'],
     theme: {
       extend: {
         boxShadow: boxShadow(),
