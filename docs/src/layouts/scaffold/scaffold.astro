@@ -11,13 +11,15 @@ const { title } = Astro.props;
 
 <Html title={title}>
   <section
-    class="w-screen h-screen grid grid-cols-[minmax(max-content,_320px)_repeat(2,_1fr)] grid-rows-1 gap-8 p-8"
+    class="w-screen h-screen grid grid-cols-[minmax(max-content,_240px)_repeat(2,_1fr)] grid-rows-1 gap-8 p-8"
   >
     <aside class="col-span-1 overflow-hidden overflow-y-auto">
       <Navbar />
     </aside>
-    <main class="col-span-2 container overflow-hidden overflow-y-auto">
-      <slot />
+    <main class="col-span-2 overflow-hidden overflow-y-auto">
+      <section class="mx-auto max-w-4xl grid grid-cols-1 auto-rows-auto gap-8 pr-1.5">
+        <slot />
+      </section>
     </main>
   </section>
 </Html>
