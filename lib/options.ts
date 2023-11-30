@@ -1,6 +1,6 @@
 const defaultOptions = {
   colors: {
-    neutral: '#9E9E9E',
+    neutral: '#71717A',
     primary: '#3F51B5',
     secondary: '#E91E63',
     accent: '#9C27B0',
