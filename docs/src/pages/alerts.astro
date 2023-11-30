@@ -10,6 +10,26 @@ import Scaffold from "../layouts/scaffold/scaffold.astro";
       <p>Alert Content</p>
     </div>
   </Preview>
+  <Preview title="Alert With Buttons">
+    <div role="alert" class="alert">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24" class="text-info-40 dark:text-info-80"></iconify-icon>
+      <p>Alert Content</p>
+      <div>
+        <button class="btn btn-text">Bye</button>
+        <button class="btn btn-success">OK</button>
+      </div>
+    </div>
+  </Preview>
+  <Preview title="Alert Title and Description">
+    <div role="alert" class="alert">
+      <iconify-icon icon="tabler:info-circle" width="24" height="24" class="text-info-40 dark:text-info-80"></iconify-icon>
+      <div>
+        <h6>Alert Title</h6>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </div>
+      <button class="btn btn-tonal-primary">OK</button>
+    </div>
+  </Preview>
   <Preview title="Color Alerts" asCol>
     <div role="alert" class="alert alert-primary">
       <p>Primary Alert Content</p>
