@@ -10,10 +10,44 @@ import Scaffold from '../layouts/scaffold/scaffold.astro';
   </Preview>
   <Preview title="Divider With Content">
     <div class="divider">
-      <p>Hey</p>
+      <p>Divider</p>
     </div>
     <div class="divider">
       <iconify-icon icon="tabler:mouse" width="24" height="24"></iconify-icon>
     </div>
+  </Preview>
+  <Preview title="Custom Divider Position">
+    <div class="divider divider-start">
+      <p>Divider</p>
+    </div>
+    <div class="divider">
+      <p>Divider</p>
+    </div>
+    <div class="divider divider-end">
+      <p>Divider</p>
+    </div>
+  </Preview>
+  <Preview title="Vertical Divider">
+    <div class="h-60 flex gap-4">
+      <div class="divider divider-vertical divider-start">
+        <p>Divider</p>
+      </div>
+      <div class="divider divider-vertical">
+        <p>Divider</p>
+      </div>
+      <div class="divider divider-vertical divider-end">
+        <p>Divider</p>
+      </div>
+    </div>
+  </Preview>
+  <Preview title="Colored Divider">
+    <div class="divider"><p>Neutral</p></div>
+    <div class="divider divider-primary"><p>Primary</p></div>
+    <div class="divider divider-secondary"><p>Secondary</p></div>
+    <div class="divider divider-accent"><p>Accent</p></div>
+    <div class="divider divider-info"><p>Info</p></div>
+    <div class="divider divider-success"><p>Success</p></div>
+    <div class="divider divider-warning"><p>Warning</p></div>
+    <div class="divider divider-error"><p>Error</p></div>
   </Preview>
 </Scaffold>
