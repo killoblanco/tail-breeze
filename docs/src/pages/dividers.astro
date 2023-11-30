@@ -1,0 +1,19 @@
+---
+import Preview from '../components/preview.astro';
+import Scaffold from '../layouts/scaffold/scaffold.astro';
+---
+
+<Scaffold title="Dividers">
+  <h2>Dividers</h2>
+  <Preview title="Default Divider">
+    <div class="divider"></div>
+  </Preview>
+  <Preview title="Divider With Content">
+    <div class="divider">
+      <p>Hey</p>
+    </div>
+    <div class="divider">
+      <iconify-icon icon="tabler:mouse" width="24" height="24"></iconify-icon>
+    </div>
+  </Preview>
+</Scaffold>
