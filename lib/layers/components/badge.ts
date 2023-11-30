@@ -43,7 +43,7 @@ export const badgeComponents = (options = defaultOptions, api: PluginAPI): CSSRu
     gap: api.theme('spacing.1'),
     letterSpacing: api.theme('letterSpacing.wide'),
     lineHeight: api.theme('lineHeight.4'),
-    padding: [api.theme<string>('spacing[0.5]'), api.theme<string>('spacing[1.5]')],
+    padding: `${api.theme('spacing[0.5]')} ${api.theme('spacing[1.5]')}`,
     '&:empty': {
       display: 'inline-block',
       height: api.theme('spacing[1.5]'),
