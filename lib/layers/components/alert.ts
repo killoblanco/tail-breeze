@@ -17,18 +17,13 @@ export const alertComponents = (options = defaultOptions, api: PluginAPI): CSSRu
     borderRadius: api.theme('borderRadius.md'),
     display: 'grid',
     gap: api.theme('spacing.4'),
-    gridAutoFlow: 'row',
-    justifyItems: 'center',
+    gridAutoFlow: 'column',
+    gridTemplateRows: '1fr',
+    gridAutoColumns: 'auto 1fr auto',
+    justifyItems: 'start',
     padding: api.theme('spacing.4'),
-    textAlign: 'center',
     width: '100%',
     ...colorVariant('neutral', api),
-    [`@media (min-width: ${api.theme('screens.sm')})`]: {
-      gridAutoFlow: 'column',
-      gridTemplateColumns: 'auto minmax(auto, 1fr)',
-      justifyItems: 'start',
-      textAlign: 'start',
-    }
   },
   ...['primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'].reduce(
     (acc, variant) => ({
