@@ -14,7 +14,7 @@ if (withCode) code = (await Astro.slots.render("default")).trim().replaceAll("> 
 
 const className = [
   "border border-neutral-70 dark:border-neutral-30",
-  "flex flex-wrap items-center justify-center w-full p-8 rounded-md",
+  "flex flex-wrap w-full p-8 rounded-md",
   {
     "flex-col sm:flex-row": !asCol,
     "flex-col": asCol,
@@ -32,7 +32,7 @@ const className = [
 
 <section class="flex flex-col gap-2">
   {title && <h6>{title}</h6>}
-  <section class:list={className}>
+  <section class:list={[...className, 'items-center justify-center']}>
     <slot />
   </section>
   {
@@ -42,7 +42,9 @@ const className = [
           <iconify-icon icon="tabler:code-circle" width="20" height="20" />
           View Code
         </summary>
-        <pre class:list={[...className, 'bg-neutral-90 dark:bg-neutral-20']} set:text={code} />
+        <pre class:list={[...className, 'justify-start items-start bg-neutral-90 dark:bg-neutral-20']}>
+          <code class="language-html" set:text={code} />
+        </pre>
       </details>
     )
   }
