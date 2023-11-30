@@ -14,7 +14,6 @@ if (withCode) code = (await Astro.slots.render("default")).trim().replaceAll("> 
 
 const className = [
   "border border-neutral-70 dark:border-neutral-30",
-  "bg-neutral-95 dark:bg-neutral-12",
   "flex flex-wrap items-center justify-center w-full p-8 rounded-md",
   {
     "flex-col sm:flex-row": !asCol,
@@ -43,7 +42,7 @@ const className = [
           <iconify-icon icon="tabler:code-circle" width="20" height="20" />
           View Code
         </summary>
-        <pre class:list={className} set:text={code} />
+        <pre class:list={[...className, 'bg-neutral-90 dark:bg-neutral-20']} set:text={code} />
       </details>
     )
   }
