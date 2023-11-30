@@ -1,5 +1,4 @@
 import tailBreeze from '@killoblanco/tail-breeze'
-import colors from 'tailwindcss/colors'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -8,17 +7,6 @@ export default {
     extend: {},
   },
   plugins: [
-    tailBreeze({
-      colors: {
-        neutral: colors.slate[500],
-        primary: colors.blue[500],
-        secondary: colors.pink[500],
-        accent: colors.violet[500],
-        success: colors.lime[500],
-        info: colors.cyan[500],
-        warning: colors.amber[500],
-        error: colors.red[500]
-      }
-    })
+    tailBreeze()
   ],
 }
