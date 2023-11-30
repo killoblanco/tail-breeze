@@ -3,17 +3,29 @@ import defaultOptions from '../../options';
 
 const colorVariant = (color: string, api: PluginAPI): CSSRuleObject => ({
   '&::before': {
-    backgroundColor: api.theme(`colors.${color}.80`),
+    content: '""',
+    height: '1px',
+    width: '100%',
+    backgroundColor: api.theme(`colors.${color}.30`),
   },
   '&::after': {
-    backgroundColor: api.theme(`colors.${color}.80`),
+    content: '""',
+    height: '1px',
+    width: '100%',
+    backgroundColor: api.theme(`colors.${color}.30`),
   },
   '[data-theme="dark"] &': {
     '&::before': {
-      backgroundColor: api.theme(`colors.${color}.30`),
+      content: '""',
+      height: '1px',
+      width: '100%',
+      backgroundColor: api.theme(`colors.${color}.80`),
     },
     '&::after': {
-      backgroundColor: api.theme(`colors.${color}.30`),
+      content: '""',
+      height: '1px',
+      width: '100%',
+      backgroundColor: api.theme(`colors.${color}.80`),
     },
   },
 })
@@ -28,15 +40,24 @@ export const dividerComponents = (options = defaultOptions, api: PluginAPI): CSS
     '&:not(:empty)': {
       gap: api.theme('spacing.4'),
     },
+  },
+  '.divider-start::before': { display: 'none' },
+  '.divider-end::after': { display: 'none' },
+  '.divider-vertical': {
+    flexDirection: 'column',
     '&::before': {
-      content: '""',
-      height: '1px',
-      width: '100%',
+      height: '100%',
+      width: '1px',
     },
     '&::after': {
-      content: '""',
-      height: '1px',
-      width: '100%',
+      height: '100%',
+      width: '1px',
     },
   },
+  ...['primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'].reduce(
+    (acc, variant) => ({
+      ...acc,
+      [`.divider-${variant}`]: colorVariant(variant, api),
+    }),
+    {}),
 })
