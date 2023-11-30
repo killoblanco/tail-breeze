@@ -49,7 +49,7 @@ export const cardComponents = (options = defaultOptions, api: PluginAPI): CSSRul
       gridRow: '1',
       gridColumn: '1',
       objectFit: 'cover',
-      height: 'fill-available',
+      height: 'stretch',
     },
     '& .card-body': {
       zIndex: '2',
