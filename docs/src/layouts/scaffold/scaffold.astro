@@ -11,12 +11,15 @@ const { title } = Astro.props;
 
 <Html title={title}>
   <section
-    class="w-screen h-screen grid grid-cols-[minmax(max-content,_240px)_repeat(2,_1fr)] grid-rows-1 gap-8 p-8"
+    class="w-screen h-screen grid grid-cols-[minmax(max-content,_240px)_repeat(2,_1fr)] grid-rows-[auto_1fr] gap-8"
   >
-    <aside class="col-span-1 overflow-hidden overflow-y-auto">
+  <header class="app-bar col-span-3 row-span-1">
+    <h6>TailBreeze</h6>
+  </header>
+    <aside class="col-span-1 row-span-2 overflow-hidden overflow-y-auto px-2">
       <Navbar />
     </aside>
-    <main class="col-span-2 overflow-hidden overflow-y-auto">
+    <main class="col-span-2 row-span-2 overflow-hidden overflow-y-auto">
       <section class="mx-auto max-w-4xl grid grid-cols-1 auto-rows-auto gap-8 pr-1.5">
         <slot />
       </section>
