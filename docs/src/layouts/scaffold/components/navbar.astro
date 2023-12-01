@@ -2,6 +2,62 @@
 const styles = {
   btn: "btn btn-tonal px-2 py-0.5 w-full justify-start",
 };
+
+const NavItems = {
+  Getting_Started: [
+    'Installation',
+    'Colors',
+    'Shadows',
+    'Typography',
+  ],
+  Components: {
+    Inputs: [
+      'Buttons',
+      'Button Groups',
+      'Checkboxed',
+      'Radio Group',
+      'Rating',
+      'Select',
+      'Slider',
+      'Switch',
+      'Text Field',
+    ],
+    Data_Display: [
+      'Avatars',
+      'Badges',
+      'Carousels',
+      'Chat Bubbles',
+      'Chips',
+      'Dividers',
+      'Lists',
+      'Tables',
+      'Tooltips',
+    ],
+    Feedback: [
+      'Alerts',
+      'Backdrop',
+      'Dialogs',
+      'Progress',
+      'Skeletons',
+      'Snackbars',
+    ],
+    Surfaces: [
+      'Accordions',
+      'App Bars',
+      'Cards',
+      'Paper'
+    ],
+    Navigation: [
+      'Breadcrumbs',
+      'Drawers',
+      'Links',
+      'Menus',
+      'Paginations',
+      'Steppers',
+      'Tabs',
+    ]
+  }
+}
 ---
 
 <style>
@@ -20,67 +76,25 @@ const styles = {
   }
 </style>
 
+
 <ul class="text-body-2">
-  <li>
-    <details open>
-      <summary>Defaults</summary>
-      <ul>
-        <li>
-          <a class={styles.btn} href="/colors">Colors</a>
-        </li>
-        <li>
-          <a class={styles.btn} href="/shadows">Shadows</a>
-        </li>
-        <li>
-          <a class={styles.btn} href="/typography">Typography</a>
-        </li>
-      </ul>
-    </details>
-  </li>
-  <li>
-    <details open>
-      <summary>Components</summary>
-      <ul>
-        <li>
-          <details open>
-            <summary>Actions</summary>
-            <ul>
-              <li>
-                <a class={styles.btn} href="/buttons">Buttons</a>
-              </li>
-            </ul>
-          </details>
-        </li>
-        <li>
-          <details open>
-            <summary>Data Display</summary>
-            <ul>
-              <li>
-                <a class={styles.btn} href="/avatars">Avatars</a>
-              </li>
-              <li>
-                <a class={styles.btn} href="/badges">Badges</a>
-              </li>
-              <li>
-                <a class={styles.btn} href="/cards">Cards</a>
-              </li>
-              <li>
-                <a class={styles.btn} href="/dividers">Dividers</a>
-              </li>
-            </ul>
-          </details>
-        </li>
-        <li>
-          <details open>
-            <summary>Feedback</summary>
-            <ul>
-              <li>
-                <a class={styles.btn} href="/alerts">Alerts</a>
-              </li>
-            </ul>
-          </details>
-        </li>
-      </ul>
-    </details>
-  </li>
+  {Object.entries(NavItems).map(function parseItems ([key, value]) {
+    return (
+      <li>
+        <details open>
+          <summary>{key.replaceAll('_', ' ')}</summary>
+          <ul>
+            {Array.isArray(value)
+              ? value.map((item) => (
+                <li>
+                  <a class={styles.btn} href={`/${item.toLocaleLowerCase()}`}>{item}</a>
+                </li>
+              ))
+              : Object.entries(value).map(parseItems)
+            }
+          </ul>
+        </details>
+      </li>
+    )
+  })}
 </ul>
