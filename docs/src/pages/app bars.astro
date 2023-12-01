@@ -1,0 +1,56 @@
+---
+import Preview from "../components/preview.astro";
+import Scaffold from "../layouts/scaffold/scaffold.astro";
+---
+
+<Scaffold title="App Bars">
+  <h2>App Bars</h2>
+  <Preview title="Default App Bar">
+    <div class="app-bar">
+      <h6>
+        TailBreeze
+      </h6>
+    </div>
+  </Preview>
+  <Preview title="App Bar With Actions">
+    <div class="app-bar">
+      <button type="button" class="btn btn-text p-2">
+          <iconify-icon icon="tabler:menu-2" width="24" height="24"></iconify-icon>
+        </button>
+        <h6>
+          TailBreeze
+        </h6>
+        <div class="flex-grow"></div>
+        <nav>
+          <a href="#" class="btn btn-text">
+            Products
+        </a>
+          <a href="#" class="btn btn-primary">
+            Login
+            <iconify-icon icon="tabler:login" width="20" height="20"></iconify-icon>
+        </a>
+      </nav>
+    </div>
+  </Preview>
+  <Preview title="Default Bottom App Bar">
+    <div class="btm-app-bar">
+      <div class="flex gap-2">
+        <button type="button" class="btn btn-text p-1">
+          <iconify-icon icon="tabler:square-check" width="24" height="24"></iconify-icon>
+        </button>
+        <button type="button" class="btn btn-text p-1">
+          <iconify-icon icon="tabler:brush" width="24" height="24"></iconify-icon>
+        </button>
+        <button type="button" class="btn btn-text p-1">
+          <iconify-icon icon="tabler:microphone" width="24" height="24"></iconify-icon>
+        </button>
+        <button type="button" class="btn btn-text p-1">
+          <iconify-icon icon="tabler:photo" width="24" height="24"></iconify-icon>
+        </button>
+      </div>
+      <button type="button" class="btn btn-tonal-primary p-3">
+        <iconify-icon icon="tabler:plus" width="24" height="24"></iconify-icon>
+      </button>
+    </div>
+  </Preview>
+</Scaffold>
