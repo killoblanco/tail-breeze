@@ -46,12 +46,12 @@ export const dividerComponents = (options = defaultOptions, api: PluginAPI): CSS
   '.divider-vertical': {
     flexDirection: 'column',
     '&::before': {
-      height: '100%',
-      width: '1px',
+      height: '100% !important',
+      width: '1px !important',
     },
     '&::after': {
-      height: '100%',
-      width: '1px',
+      height: '100% !important',
+      width: '1px !important',
     },
   },
   ...['primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'].reduce(
