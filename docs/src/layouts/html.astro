@@ -16,9 +16,31 @@ const { title } = Astro.props;
     <title>{title && `${title} | `}TailBreeze</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
   </head>
-  <Body client:load>
+  <body>
     <slot />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  </Body>
+  </body>
 </html>
+
+<script>
+  import { useDarkModeStore } from './scaffold/store/dark-mode'
+
+  const preffersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  if (preffersDarkMode) useDarkModeStore.setState({mode: 'dark'})
+
+  const mode = useDarkModeStore.getState().mode
+  const body = document.getElementsByTagName('body')[0]!
+
+  if (mode === 'dark') { body.dataset.theme = 'dark' }
+  else { body.removeAttribute('data-theme') }
+
+  useDarkModeStore.subscribe(
+    ({mode}) => {
+      const body = document.getElementsByTagName('body')[0]!
+      if (mode === 'dark') { body.dataset.theme = 'dark' }
+      else { body.removeAttribute('data-theme') }
+    },
+  )
+
+</script>
