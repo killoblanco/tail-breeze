@@ -11,10 +11,12 @@ const { title } = Astro.props;
 
 <Html title={title}>
   <section
-    class="w-screen h-screen grid grid-cols-[minmax(max-content,_240px)_repeat(2,_1fr)] grid-rows-[auto_1fr] gap-8"
+    class="w-screen h-screen grid grid-cols-[minmax(max-content,_240px)_repeat(2,_1fr)] grid-rows-[auto_1fr] gap-8 pb-4"
   >
   <header class="app-bar col-span-3 row-span-1">
     <h6>TailBreeze</h6>
+    <div class="flex-grow"></div>
+    <theme-toggle class="btn btn-text rounded-full p-2" />
   </header>
     <aside class="col-span-1 row-span-2 overflow-hidden overflow-y-auto px-2">
       <Navbar />
@@ -26,3 +28,6 @@ const { title } = Astro.props;
     </main>
   </section>
 </Html>
+
+
+<script src="../../components/theme-toggle.ts"></script>
